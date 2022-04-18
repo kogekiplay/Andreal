@@ -1,6 +1,7 @@
 ﻿using System.Text;
 using Andreal.Data.Json.Bandori;
 using Andreal.Data.Json.Hitokoto;
+using Andreal.Data.Json.Caihongpi;
 using Andreal.Data.Json.Ycm;
 using Newtonsoft.Json;
 
@@ -19,6 +20,12 @@ internal static class OtherApi
     {
         var data = JsonConvert.DeserializeObject<Hitokoto>(await GetString("https://v1.hitokoto.cn"));
         return $"{data?.Content}\n  ----「{data?.From}」";
+    }
+    
+    internal static async Task<string> CaihongpiApi()
+    {
+        var data = JsonConvert.DeserializeObject<Caihongpi>(await GetString("https://api.muxiaoguo.cn/api/caihongpi?api_key=5fd599be1de594e9"));
+        return $"{data?.data.comment}";
     }
 
     internal static async Task<string> JrrpApi(long qqid) =>

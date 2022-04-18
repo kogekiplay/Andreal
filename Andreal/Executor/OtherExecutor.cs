@@ -25,6 +25,9 @@ internal class OtherExecutor : ExecutorBase
 
     [CommandPrefix("/yiyan")]
     private static async Task<MessageChain> Hitokoto() => await OtherApi.HitokotoApi();
+    
+    [CommandPrefix("/夸我")]
+    private static async Task<MessageChain> Caihongpi() =>await OtherApi.CaihongpiApi();
 
     [CommandPrefix("/jrrp")]
     private async Task<MessageChain> Jrrp() =>

@@ -38,7 +38,7 @@ internal static class Program
         Console.WriteLine(@"| ' </ _ | ' \/ _` |  _/ _` |");
         Console.WriteLine(@"|_|\_\___|_||_\__,_\__|\__,_|");
 
-        Console.WriteLine("Konata. Konata Project 2022\nProject Andreal v0.2.9 on Konata\n\n");
+        Console.WriteLine("Konata. Konata Project 2022\nProject Andreal v0.2.91 on Konata\nModified by Kogeki\n\n");
 
         External.Initialize(Config);
 
