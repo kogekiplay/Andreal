@@ -41,7 +41,7 @@ internal class ArcExecutor : ExecutorBase
     }
 
     [CommandPrefix("/arc download")]
-    private static MessageChain Download() => "https://dl.arcaea.moe/";
+    private static MessageChain Download() => "https://616.sb/";
 
     [CommandPrefix("/arc bind", "绑定arc")]
     private async Task<MessageChain> Bind()
@@ -265,7 +265,7 @@ internal class ArcExecutor : ExecutorBase
         return await new ArcBest30ImageGenerator(b30data, playerInfo).Generate();
     }
 
-    [CommandPrefix("/arc b40", "查b40")]
+    [CommandPrefix("/arc b40", "查b40", "/arc miku")]
     private async Task<MessageChain> Best40()
     {
         if (User == null) return RobotReply.NotBind;
